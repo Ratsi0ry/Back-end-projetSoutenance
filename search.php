@@ -6,9 +6,11 @@
         exit(0); 
     }
 
+    header("Content-Type: application/json; charset=UTF-8");
+
     //require_once db.php
 
-    if($_SERVER[REQUEST_METHOD] == 'GET'){
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         $search = isset($_GET['q']) ? trim($_GET['q']) : '';
 
@@ -63,5 +65,5 @@
                 'message' => 'Erreur'.$mysqli->error
             ]);
         }
-    };
+    }
 ?>

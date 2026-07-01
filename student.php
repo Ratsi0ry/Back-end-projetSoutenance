@@ -56,6 +56,14 @@
                    'message' => 'Erreur de mis a jour'.$e->getMessage() 
                 ]);
             }
+                
+            // test postman
+            /*echo json_encode([
+                'status' => 'success',
+                'message' => 'Test API modification reussie avec success',
+                'data_recue' => $data 
+            ]);*/
+
         } else {
             echo json_encode([
                 'status' => 'error',
@@ -85,6 +93,14 @@
                 ]);
             }
             $stmt->close();
+
+            //test postman
+            /*echo json_encode([
+                'status' => 'success',
+                'message' => 'Test API suppresion reussie avec success',
+                'data_recue' => $data
+            ]);*/
+
         } else{
             echo json_encode([
                 'status' => 'error',
